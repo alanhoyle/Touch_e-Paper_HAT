@@ -228,6 +228,8 @@ except IOError as e:
     
 except KeyboardInterrupt:    
     logging.info("ctrl + c:")
+    epd.init(epd.FULL_UPDATE)
+    epd.Clear(0xFF)
     flag_t = 0
     epd.sleep()
     time.sleep(2)
